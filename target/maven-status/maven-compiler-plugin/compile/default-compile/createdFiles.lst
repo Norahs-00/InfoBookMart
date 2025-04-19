@@ -1,0 +1,5 @@
+com\infobookmart\controller\dao\UserDAO.class
+com\infobookmart\controller\servlet\LoginController.class
+com\infobookmart\controller\database\DatabaseConnection.class
+com\infobookmart\model\User.class
+com\infobookmart\controller\servlet\RegisterController.class
