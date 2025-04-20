@@ -1,6 +1,5 @@
 package com.infobookmart.controller.dao;
 
-
 import com.infobookmart.controller.database.DatabaseConnection;
 import com.infobookmart.model.User;
 
@@ -9,7 +8,9 @@ import java.sql.*;
 public class UserDAO {
 
     public boolean registerUser(User user) {
-        String sql = "INSERT INTO users (email, firstName, lastName, userName, role, accountStatus, dateOfBirth, password, registerDate, profileImg, contactNo, gender, address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO users (email, firstName, lastName, userName, role, accountStatus, "
+                   + "dateOfBirth, password, registerDate, profileImg, contactNo, gender, address) "
+                   + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -28,9 +29,7 @@ public class UserDAO {
             stmt.setString(12, user.getGender());
             stmt.setString(13, user.getAddress());
 
-            int rows = stmt.executeUpdate();
-            return rows > 0;
-
+            return stmt.executeUpdate() > 0;
         } catch (Exception e) {
             e.printStackTrace();
             return false;
@@ -69,5 +68,25 @@ public class UserDAO {
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * Check if a user with the given email already exists.
+     * @param email the email to check
+     * @return true if email is found in users table, false otherwise
+     */
+    public boolean emailExists(String email) {
+        String sql = "SELECT 1 FROM users WHERE email = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
+        } catch (Exception e) {
+            e.printStackTrace();
+            // In case of error assume it exists to prevent duplicate
+            return true;
+        }
     }
 }
