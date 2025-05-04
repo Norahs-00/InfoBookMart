@@ -1,0 +1,71 @@
+/* login.css */
+
+/* full‐page centered layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../asset/images/loginbg.png') no-repeat center center fixed;
+  background-size: cover;
+  
+}
+
+
+/* the white box */
+.login-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 35%;
+  padding: 2rem;
+}
+
+/* heading */
+.login-card h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* labels a bit bolder */
+.login-card .form-label {
+  font-weight: 500;
+}
+
+/* make inputs full‑width */
+.login-card .form-control {
+  border-radius: 4px;
+}
+
+/* button style override (uses Bootstrap button under the hood) */
+.login-card .btn-primary {
+  background-color: #358237;
+  border-color: #81cb83;
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+.login-card .btn-primary:hover {
+  background-color: rgb(0, 221, 0);
+  border-color: rgb(142, 255, 142);
+}
+
+/* smaller “sign up” link text */
+.login-card .signup-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.login-card .signup-text a {
+  color: rgb(0, 128, 0);
+  text-decoration: none;
+}
+.login-card .signup-text a:hover {
+  text-decoration: underline;
+}

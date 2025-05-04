@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.top-bar {
+  position: fixed; /* makes navbar stay fixed on top */
+  top: 0;
+  width: 96%;
+  height: 45px;
+  z-index: 1000; /* keeps it above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ccc;
+  background-color: #1a3a2b;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.search-bar {
+  width: 45%;
+  padding: 8px;
+  background-color: lightgray;
+  font-size: 15px;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #7eb87a; /* changes text color to light green on hover */
+}
+
+.user-icon {
+  margin-left: 10px;
+}
+
+.home-section {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to top left, #a7c68c, #ffffff);
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+
+.content .highlight {
+  color: #3b7f4c;
+}
+
+.content p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  background-color: #fff;
+  border: 2px solid #3b7f4c;
+  color: #377747;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3b7f4c;
+  color: #fff;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 70%;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-books {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.featured-books img {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.books-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
+}
+
+.hero1 {
+  text-align: left;
+  padding: 40px 30px 10px;
+}
+
+.hero1 h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.hero2 {
+  text-align: left;
+  padding: 40px 30px 10px;
+}
+
+.hero2 h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-left: 50px;
+}
+
+.book-grid {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  width: 250px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-card p {
+  padding: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: fit;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.book-card img:hover {
+  transform: scale(1.05); /* zoom on hover */
+}
+
+.book-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 250px;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-card button:hover {
+  background-color: #008000;
+  transform: scale(1.03);
+}
+
+.collection-banner {
+  text-align: center;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 90px;
+}
+
+.collection-banner h1 {
+  position: relative;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.collection-banner img {
+  width: 85%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.card {
+  background: white;
+  color: #333;
+  border-radius: 5px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 450px;
+  object-fit: fill;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: fit;
+  cursor: pointer;
+}
+
+.logo-pic {
+  width: 48px;
+  height: 55px;
+  object-fit: fit;
+}
+
+/* Footer Section */
+.site-footer {
+  background-color: #1a3a2b;
+  color: #ffffff;
+  padding: 50px 150px 20px;
+  font-size: 15px;
+}
+
+.site-footer p {
+  text-align: justify;
+  margin-right: 40px;
+}
+
+.new-footer-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-card {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-card h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-card p {
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footer-list a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover {
+  color: #00ff99; /* Light green hover */
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #00ff99;
+}
+
+.footer-bottom-centered {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-logo img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.footer-logo span {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Position profile dropdown */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown links */
+.profile-dropdown .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect on dropdown links */
+.profile-dropdown .dropdown-content a:hover {
+  background-color: #b2c8b2;
+}
+
+/* Show the dropdown when hovering over profile */
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
