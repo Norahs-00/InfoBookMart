@@ -1,0 +1,33 @@
+    .popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    bottom: 20px; 
+    width: 100%;
+    background-color: transparent; 
+    text-align: center;
+    pointer-events: none; 
+}
+
+.popup-content {
+    display: inline-block;
+    background-color: #008000;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: slideUp 0.3s ease;
+    pointer-events: auto;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.popup-close-btn {
+    display: none;
+}
+
+ 

@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.mission-container {
+  max-width: 900px;
+  margin: 85px auto;
+  padding: 30px;
+  background-color: #bcd1bf;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mission-container h1 {
+  color: #1a3a2b;
+  margin-bottom: 20px;
+}
+
+.mission-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #1a3a2b;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+ }
+ 
+.btn-home:hover {
+      background-color: #155029;
+}

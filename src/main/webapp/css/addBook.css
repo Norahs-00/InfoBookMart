@@ -1,0 +1,98 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 30px;
+  padding: 20px;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  color: #008000;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+/* Form container */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group layout */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Label styling */
+.form-group label {
+  width: 150px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+
+/* Focus effect */
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #dfffe8;
+  border-color: #008000;
+  outline: none;
+}
+
+/* Buttons section */
+.form-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 25px;
+}
+
+/* Submit button styling */
+button {
+  font-size: 15;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Submit button hover */
+button:hover {
+  background-color: #218838;
+}
+
+/* Cancel link */
+.form-buttons a {
+  margin-left: 15px;
+  color: #555;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Cancel link hover */
+.form-buttons a:hover {
+  color: #000;
+  text-decoration: underline;
+}

@@ -1,0 +1,303 @@
+.top-bar {
+  position: fixed; /* makes navbar stay fixed on top */
+  top: 0;
+  width: 96%;
+  height: 45px;
+  z-index: 1000; /* keeps it above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-bottom: 1px solid #ccc;
+  background-color: #1a3a2b;
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: fit;
+  cursor: pointer;
+}
+
+.logo-pic {
+  width: 48px;
+  height: 55px;
+  object-fit: fit;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  padding-left: 80px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.search-bar {
+  width: 400px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.search-button {
+  padding: 6px 14px;
+  background-color: #3b7f4c;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #2e5e38;
+}
+
+nav a {
+  margin:  10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.3s;
+ }
+ 
+nav a:hover{
+	color: #7eb87a; /* changes text color to light green on hover */
+}
+
+
+.user-icon {
+  margin-left: 10px;
+}
+
+/* Position profile dropdown */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown links */
+.profile-dropdown .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect on dropdown links */
+.profile-dropdown .dropdown-content a:hover {
+  background-color: #b2c8b2;
+}
+
+/* Show the dropdown when hovering over profile */
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Genres dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Dropdown content are hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown links of genres */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown when hovering over genres button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover effect on dropdown links of genres */
+.dropdown-content a:hover {
+  background-color: #b2c8b2;
+}
+
+
+.genre-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button style */
+.genre-dropbtn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Dropdown content hidden by default */
+.genre-dropdown-content {
+	 display: none;
+	 position: absolute;
+	 right: 0;
+	 background-color: white;
+	 min-width: 250px;
+	 box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+	 z-index: 1;
+	 border-radius: 4px;
+}
+
+/* Links inside dropdown */
+.genre-dropdown-content a {
+	 color: black;
+	 padding: 12px 16px;
+	 text-decoration: none;
+	 display: block;
+}
+
+.site-footer .genre-dropdown-content a {
+  color: black;
+}
+
+.site-footer .genre-dropdown-content a:hover {
+  background-color: #b2c8b2;
+}
+
+/* Show dropdown on hover */
+.genre-dropdown:hover .genre-dropdown-content {
+    display: block;
+}
+
+/* Optional: style dropdown links on hover */
+.genre-dropdown-content a:hover {
+    background-color: #b2c8b2;
+}
+
+
+/* Footer Section */
+.site-footer {
+  background-color: #1a3a2b;
+  color: #ffffff;
+  padding: 50px 150px 20px;
+  font-size: 15px;
+}
+
+.site-footer p {
+  text-align: justify;
+  margin-right: 40px;
+}
+
+.new-footer-grid {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-card {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-card h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-card p {
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.footer-list a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover {
+  color: #00ff99; /* Light green hover */
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #00ff99;
+}
+
+.footer-bottom-centered {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-logo img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.footer-logo span {
+  margin-left: 10px;
+  vertical-align: middle;
+}

@@ -12,7 +12,7 @@ body, html {
 
 .register-form-section {
     flex: 1;
-    background-color: white;
+    background-color: #cbdfc8;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -28,7 +28,44 @@ body, html {
 .register-image-section {
     flex: 1;
     background-image: url('../asset/images/register.png'); /* Adjust this path if needed */
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.logo {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 20%;
+    height: auto;
+    
+}
+
+.submit-btn {
+	width: 40%;
+    background-color: #008000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background-color: #73ff73; 
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.form-control{
+	width: 300px;
+}
+
+.form-select{
+	width: 300px;
 }

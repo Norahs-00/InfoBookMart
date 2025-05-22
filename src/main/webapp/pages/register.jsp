@@ -87,7 +87,9 @@
     </div>
 
     <!-- RIGHT SIDE: FULL HEIGHT IMAGE -->
-    <div class="register-image-section"></div>
+    <div class="register-image-section">
+    </div>
+    <img src="<c:url value='/asset/images/logo.png' />" alt="Company Logo" class="logo">
 
 </div>
 

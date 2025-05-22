@@ -89,4 +89,37 @@ public class UserDAO {
             return true;
         }
     }
+    
+    public boolean updateUser(User user) {
+        String sql = "UPDATE users SET firstName = ?, lastName = ?, userName = ?, email = ?, " +
+                     "dateOfBirth = ?, contactNo = ?, gender = ?, address = ?, profileImg = ? WHERE userId = ?";
+
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, user.getFirstName());
+            stmt.setString(2, user.getLastName());
+            stmt.setString(3, user.getUserName());
+            stmt.setString(4, user.getEmail());
+            stmt.setDate(5, new java.sql.Date(user.getDateOfBirth().getTime())); // Convert to java.sql.Date
+            stmt.setString(6, user.getContactNo());
+            stmt.setString(7, user.getGender());
+            stmt.setString(8, user.getAddress());
+            stmt.setString(9, user.getProfileImg());
+            stmt.setInt(10, user.getUserId());
+
+
+            return stmt.executeUpdate() > 0;
+
+
+
+        } catch (SQLException e) {
+
+            e.printStackTrace();
+
+            return false;
+
+        }
+       
+    }
 }

@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #1a3a2b;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 70px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+  background-color: #4b6552;
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  padding: 40px;
+  flex: 1;
+  background-color: #f1f5f9;
+}
+
+/* Table Header */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 40px 0;
+}
+
+.table-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Add User Button */
+.add-btn {
+  background-color: #5db90e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #3f7d00;
+}
+
+/* User Table */
+.content-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-table th,
+.content-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.content-table th:last-child,
+.content-table td:last-child {
+  border-right: none;
+}
+
+.content-table th {
+  background-color: #a3c891;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.content-table td {
+  color: #1e293b;
+}
+
+.content-table td:last-child {
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Action Buttons */
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 8px;
+  color: #fff;
+}
+
+.btn.green {
+  background-color: #009300;
+}
+
+.btn.green:hover {
+  background-color: #00ca00;
+}
+
+.btn.red {
+  background-color: #be1010;
+}
+
+.btn.red:hover {
+  background-color: #ff4040;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-btn {
+    margin-top: 10px;
+  }
+}

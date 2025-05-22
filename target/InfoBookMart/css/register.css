@@ -1,43 +1,34 @@
-body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .register-container {
     display: flex;
-    flex-direction: row;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 1000px;
-    margin: auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    height: 100vh;
+    width: 100%;
 }
 
-.form-section {
+.register-form-section {
     flex: 1;
-    padding: 40px;
+    background-color: white;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 40px 30px;
+    overflow-y: auto;
 }
 
-.image-section {
+.form-wrapper {
+    width: 100%;
+    max-width: 700px;
+}
+
+.register-image-section {
     flex: 1;
-    background-image: url('/InfoBookMart/asset/images/register.png');
+    background-image: url('../asset/images/register.png'); /* Adjust this path if needed */
     background-size: cover;
     background-position: center;
-}
-
-.submit-btn {
-    background-color: #198754;
-    color: white;
-}
-
-.submit-btn:hover {
-    background-color: #157347;
-}
-
-/* Responsive Layout */
-@media (max-width: 768px) {
-    .register-container {
-        flex-direction: column;
-    }
+    background-repeat: no-repeat;
 }

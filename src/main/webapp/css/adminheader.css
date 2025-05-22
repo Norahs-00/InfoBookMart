@@ -1,0 +1,71 @@
+/* adminheader.css */
+.admin-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 55px;
+  background-color: #1a3a2b;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.admin-header .logo-pic {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.admin-header .site-name {
+  color: #fff;
+  font-size: 1 rem;
+  font-weight: bold;
+}
+
+.profile-dropdown {
+  position: relative; margin-left: auto;
+}
+
+.profile-pic {
+  width: 36px; height: 36px; border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Position profile dropdown */
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.profile-dropdown .dropdown-content {
+  padding: 10px;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 4px;
+ 
+}
+
+/* Dropdown links */
+.profile-dropdown .dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+/* Hover effect on dropdown links */
+.profile-dropdown .dropdown-content a:hover {
+  background-color: #b2c8b2;
+}
+
+/* Show the dropdown when hovering over profile */
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}

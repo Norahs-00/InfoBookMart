@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.infobookmart.model.User" %>
 <%
-    com.infobookmart.model.User user = (com.infobookmart.model.User) session.getAttribute("currentUser");
+    // Session validation: Allow only customers
+    User user = (User) session.getAttribute("currentUser");
     if (user == null || !"admin".equalsIgnoreCase(user.getRole())) {
         response.sendRedirect(request.getContextPath() + "/pages/login.jsp");
         return;
@@ -9,88 +11,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard | InfoBookMart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/css/dashboard.css">
+  <meta charset="UTF-8"/>
+  <title>Admin Dashboard – InfoBookMart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/adminheader.css"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/dashboard.css"/>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
 </head>
 <body>
+  <%@ include file="/pages/adminheader.jsp" %>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
-    <a class="navbar-brand" href="#">InfoBookMart Admin</a>
-    <div class="ms-auto">
-        <span class="navbar-text text-white me-3">Hi, <%= user.getFirstName() %>!</span>
-        <a href="<%= request.getContextPath() %>/LogoutController" class="btn btn-outline-light btn-sm">Logout</a>
+  <div class="sidebar">
+    <ul>
+      <li class="active"><a href="${pageContext.request.contextPath}/pages/dashboard.jsp">Dashboard</a></li>
+      <li><a href="manageBooks.jsp">Manage Books</a></li>
+      <li><a href="manageUsers.jsp">Manage Users</a></li>
+      <li><a href="${pageContext.request.contextPath}/manageOrders">Manage Orders</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <div class="header-bar">
+      <h2>Admin Dashboard</h2>
     </div>
-</nav>
 
-<div class="container mt-5">
-    <h2 class="mb-4">Admin Dashboard</h2>
-
-    <div class="row g-4">
-        <!-- Books -->
-        <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Books</h5>
-                    <p class="card-text">Manage all books here.</p>
-                    <a href="manageBooks.jsp" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Orders -->
-        <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Orders</h5>
-                    <p class="card-text">View and manage orders.</p>
-                    <a href="orders.jsp" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Customers -->
-        <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Customers</h5>
-                    <p class="card-text">Customer details and profiles.</p>
-                    <a href="customers.jsp" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sales -->
-        <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Sales</h5>
-                    <p class="card-text">Track book sales.</p>
-                    <a href="sales.jsp" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Profile -->
-        <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Profile</h5>
-                    <p class="card-text">Update your admin profile.</p>
-                    <a href="updateAdmin.jsp" class="btn btn-primary">Go</a>
-                </div>
-            </div>
-        </div>
+    <div class="summary">
+      <div class="card">
+      	<i class="fas fa-book icon" style="color: #2487e9;"></i>
+        <h3>Total Books</h3>
+        <p>1,248</p>
+      </div>
+      <div class="card">
+      	<i class="fas fa-check-circle icon" style="color: #2ac71b;"></i>
+        <h3>Available Books</h3>
+        <p>1,186</p>
+      </div>
+      <div class="card">
+      	<i class="fas fa-users icon" style="color: #b05dde;"></i>
+        <h3>Registered Users</h3>
+        <p>245</p>
+      </div>
     </div>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="dashboard-grid">
+      <div class="activities">
+        <h3>Recent Activities</h3>
+        <ul>
+          <li><span>Today, 2:30 PM</span><br/>
+            <strong>New Book Added:</strong> Admin added 'The Silent Patient'</li>
+          <li><span>Today, 12:15 PM</span><br/>
+            <strong>User Registration:</strong> New user 'Sarah Johnson'</li>
+          <li><span>Yesterday, 4:45 PM</span><br/>
+            <strong>Book Updated:</strong> 'To Kill a Mockingbird'</li>
+          <li><span>Yesterday, 11:20 AM</span><br/>
+            <strong>Low Stock Alert:</strong> 'The Great Gatsby' (2 left)</li>
+        </ul>
+      </div>
+
+      <div class="popular-books">
+        <h3>Popular Books</h3>
+        <ul>
+          <li><strong>To Kill a Mockingbird</strong><br/>Harper Lee – 42 borrows</li>
+          <li><strong>1984</strong><br/>George Orwell – 38 borrows</li>
+          <li><strong>The Great Gatsby</strong><br/>F. Scott Fitzgerald – 35 borrows</li>
+          <li><strong>Pride and Prejudice</strong><br/>Jane Austen – 31 borrows</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

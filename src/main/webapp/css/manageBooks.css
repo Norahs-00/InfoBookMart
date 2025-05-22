@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/*  Sidebar  */
+.sidebar {
+  width: 240px;
+  background-color: #1a3a2b;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 70px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+  background-color: #4b6552;
+  color: #fff;
+}
+
+/* Main Content  */
+.main-content {
+  margin-left: 240px;
+  padding: 40px;
+  flex: 1;
+  background-color: #f1f5f9;
+}
+
+/*  Header Bar  */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 30px 0;
+}
+
+.header-bar h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Add Book Button */
+.add-book {
+  text-align: left;
+  display: inline-block;
+  background-color: #5db90e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  
+}
+
+.add-book:hover {
+  background-color: #3f7d00;
+}
+
+.thead {
+	background-color: #3f7d00;
+}
+
+
+/* Book Table */
+.book-table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  outline: 2px; /* helps you visualize the table boundary */
+}
+
+.book-table th,
+.book-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb; /* Add vertical borders */
+}
+
+
+.book-table th.actions-col,
+.book-table td.actions-col {
+  width: 130px; /* Adjust as needed */
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+
+.book-table th {
+  background-color: #a3c891;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.book-table td {
+  color: #1e293b;
+}
+
+/*  Action Buttons  */
+.edit-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 8px;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #009300;
+}
+
+.edit-btn:hover {
+  background-color: #00ca00;
+}
+
+.delete-btn {
+  background-color: #be1010;
+}
+
+.delete-btn:hover {
+  background-color: #ff4040;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,146 @@
+body {
+   font-family: 'Segoe UI', sans-serif;
+   margin: 0;
+   background: #f8f9fa;
+}
+
+  
+.container {
+   max-width: 900px;
+   margin: 2rem auto;
+   background-color: #fff;
+   border-radius: 10px;
+   padding: 4rem;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+   border-left: 5px solid #28a745;
+   padding-left: 1rem;
+   margin-bottom: 1.5rem;
+}
+
+.tabs {
+   display: flex;
+   border-bottom: 1px solid #ccc;
+   margin-bottom: 1.5rem;
+}
+
+.tab {
+   padding: 0.75rem 1.5rem;
+   cursor: pointer;
+   border: none;
+   background: #f0f0f0;
+   font-weight: bold;
+ }
+
+.tab.active {
+   background: white;
+   border-bottom: 3px solid #28a745;
+}
+
+.profile-info {
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.profile-info img {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   margin-bottom: 1rem;
+}
+
+.profile-info h2 {
+    margin: 0;
+    color: #333;
+}
+
+.profile-info p.username {
+     margin: 0;
+     color: #666;
+}
+
+.role-badge {
+     display: inline-block;
+     margin-top: 0.5rem;
+     background-color: #c9f7c2;
+     color: #155724;
+     padding: 2px 8px;
+     font-size: 0.8rem;
+     border-radius: 5px;
+}
+
+.details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      background: #e1eee1;
+      padding: 1rem;
+      border-radius: 10px;
+}
+
+.detail-box {
+      flex: 1 1 45%;
+}
+
+.detail-box label {
+      font-weight: 600;
+      display: block;
+      color: #555;
+}
+
+.detail-box p {
+      margin: 0.25rem 0 1rem;
+      color: #222;
+}
+
+.edit-button {
+      margin-top: 1rem;
+      text-align: right;
+}
+
+.edit-button button {
+      background: #fff;
+      color: #28a745;
+      border: 2px solid #28a745;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+}
+
+.edit-button button:hover {
+       background: #28a745;
+       color: white;
+}
+
+
+@media (max-width: 600px) {
+	.detail-box {
+		flex: 1 1 100%;
+		}
+}
+
+.main-page {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.main-page button {
+    background-color: #28a745;       
+    color: white;                    
+    padding: 12px 24px;              
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;              
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 30px;
+}
+
+.main-page button:hover {
+    background-color: #218838;      
+}
