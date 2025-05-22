@@ -135,7 +135,7 @@
             <div class="book-card" onclick="location.href='books.jsp'">
                 <img src="${pageContext.request.contextPath}/asset/images/book9.png" alt="Book cover" />
                 <p>Twilight<br>By Stephenie Meyer<br>₹550</p>
-                <button onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">Go to Books</button>
+                <button onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">Go to Book</button>
 
             </div>
         </div>
@@ -145,19 +145,19 @@
     <div class="explore-banner" style="background-image: url('${pageContext.request.contextPath}/asset/images/explorebook1.jpg');">
         <h1>Explore our Amazing Collection of Books</h1>
         <div class="card-container">
-            <div class="card" onclick="location.href='books.jsp'">
+            <div class="card" onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">
                 <img src="${pageContext.request.contextPath}/asset/images/books/Raha ke Phool.jpg" alt="Book 1">
             </div>
-            <div class="card" onclick="location.href='books.jsp'">
+            <div class="card" onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">
                 <img src="${pageContext.request.contextPath}/asset/images/books/We are All Perfectly Imperfect.jpg" alt="Book 2">
             </div>
-            <div class="card" onclick="location.href='books.jsp'">
+            <div class="card" onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">
                 <img src="${pageContext.request.contextPath}/asset/images/books/Mountains Painted With Turmeric.jpg" alt="Book 3">
             </div>
-            <div class="card" onclick="location.href='books.jsp'">
+            <div class="card" onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">
                 <img src="${pageContext.request.contextPath}/asset/images/books/A Flower in the Midst of Thorns.jpg" alt="Book 4">
             </div>
-            <div class="card" onclick="location.href='books.jsp'">
+            <div class="card" onclick="event.stopPropagation(); location.href='${pageContext.request.contextPath}/DisplayAllBooksServlet';">
                 <img src="${pageContext.request.contextPath}/asset/images/books/A Tempest at Sea.jpg" alt="Book 5">
             </div>
         </div>
